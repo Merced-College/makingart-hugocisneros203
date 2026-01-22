@@ -2,6 +2,7 @@
 #include <fstream>
 
 int main() {
+    //variables
     const int WIDTH = 800;
     const int HEIGHT = 600;
     const int MAX_ITER = 300;
@@ -38,7 +39,7 @@ int main() {
 
     // Color 
     out << "    let color = iter | (iter << 8);\n";
-    out << "    data[i++] = (color >> 16) & 255;\n";
+    out << "    data[i++] = (color >> 20) & 255;\n";
     out << "    data[i++] = (color >> 8) & 255;\n";
     out << "    data[i++] = color & 255;\n";
     out << "    data[i++] = 255;\n";   // alpha
